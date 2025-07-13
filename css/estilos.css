@@ -14,7 +14,7 @@ body {
 
 /* ======= HEADER ======= */
 header {
-  background-color: #2e5e4e; /* Fucsia del logo */
+  background-color: #3f7563; /* Fucsia del logo */
   padding: 20px;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-  height: 90px;
+  height: 110px;
 }
 
 nav ul {

@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   color: #333;
   line-height: 1.6;
@@ -14,7 +14,7 @@ body {
 
 /* ======= HEADER ======= */
 header {
-  background-color: #4f8370; /* Fucsia del logo */
+  background-color: #4f8370;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -35,6 +35,8 @@ nav ul {
 }
 
 nav a {
+  position: relative;
+  display: inline-block;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -42,7 +44,50 @@ nav a {
 }
 
 nav a:hover {
-  color: #00c760; /* Verde del logo */
+  color: #00c760;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ======= HERO / INICIO ======= */
+.inicio-hero {
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.contenido-hero h1 {
+  font-size: 2.5rem;
+  color: #4f8370;
+  margin-bottom: 10px;
+}
+
+.eslogan {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.imagen-hero {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeInUp 1s ease-in;
 }
 
 /* ======= SECCIÓN BIENVENIDA ======= */
@@ -92,23 +137,20 @@ footer {
     align-items: center;
   }
 }
-/* ======= MENÚ: Animación hover con subrayado ======= */
-nav a {
-  position: relative;
-  display: inline-block;
+
+/* ======= ANIMACIONES ======= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: white;
-  transition: width 0.3s ease-in-out;
-}
-
-nav a:hover::after {
-  width: 100%;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

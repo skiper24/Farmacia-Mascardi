@@ -167,14 +167,45 @@ footer {
 
 .carrusel-slide {
   display: flex;
-  transition: transform 1.5s ease;
-  width: 400%; /* porque tenés 4 imágenes */
+  transition: transform 1s ease;
+  width: 400%; /* si tenés 4 imágenes */
 }
 
 .carrusel-slide img {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: center;
+  flex-shrink: 0;
   border-radius: 12px;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carrusel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carrusel-container {
+  position: relative; /* para posicionar las flechas */
+}
+
+.carrusel-btn.prev {
+  left: 10px;
+}
+
+.carrusel-btn.next {
+  right: 10px;
 }

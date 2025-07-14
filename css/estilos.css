@@ -157,7 +157,6 @@ footer {
 
 /* ======= CARRUSEL ======= */
 .carrusel-container {
-  position: relative;
   width: 90%;
   max-width: 700px;
   margin: 40px auto;
@@ -168,8 +167,8 @@ footer {
 
 .carrusel-slide {
   display: flex;
-  transition: transform 1s ease;
-  width: 400%;
+  transition: transform 1.5s ease;
+  width: 400%; /* porque tenés 4 imágenes */
 }
 
 .carrusel-slide img {
@@ -178,40 +177,4 @@ footer {
   object-fit: cover;
   object-position: center;
   border-radius: 12px;
-}
-
-/* Botones de navegación */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: white;
-  background-color: rgba(0,0,0,0.4);
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-  transition: background-color 0.3s ease;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.6);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .prev, .next {
-    font-size: 1.5rem;
-    padding: 8px 12px;
-  }
 }

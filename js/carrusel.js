@@ -10,15 +10,18 @@ function updateSlide() {
   slide.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   currentIndex = (currentIndex + 1) % totalSlides;
   updateSlide();
 });
 
-prevBtn.addEventListener("click", () => {
+prevBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
   updateSlide();
 });
+
 
 // Cambio automático cada 5 segundos
 setInterval(() => {

@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     "codex-preview": "development",
   },
   icons: {
-    icon: "/images/favicon.png",
-    shortcut: "/images/favicon.png",
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/favicon.png`,
+    shortcut: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/favicon.png`,
   },
 };
 
